@@ -1,12 +1,12 @@
 const Form = (props) => {
     return (
       <form onSubmit={props.handleSubmit}>
-        <label htmlFor="productName">Product Name</label>
+        <label htmlFor="productName">Product Name </label>
         <input
           type="text"
-          value={props.productName}
+          value={props.groceryItem}
           onChange={props.handleChange}
-          id="productName"
+          id="groceryItem"
         />
         <br />
 

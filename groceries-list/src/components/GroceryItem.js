@@ -1,14 +1,14 @@
 const GroceryItem = (props) => {
-    const {} = props.groceries
+    const {item, brand, units, quantity, isPurchased} = props.groceries
   
-    console.log('from product item->', props.groceries);
+    console.log(props.groceries);
       return(
-          <div onClick={ () => props.addToCart(props.groceries) }>
-            <h3>{item}</h3>
-            <h2>{brand}</h2>
-            <h2>{units}</h2>
-            <p>{quantity}</p>
-            <p>{isPurchased}</p>
+          <div>
+            <h1>Item: {item}</h1>
+            <h2>Brand: {brand}</h2>
+            <h2>Units: {units}</h2>
+            <h2>Quantity: {quantity}</h2>
+            <h2>Paid for: {isPurchased}</h2>
           </div> 
       )
   }

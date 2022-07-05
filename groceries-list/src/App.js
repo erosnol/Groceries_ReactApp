@@ -10,7 +10,7 @@ import Form from './components/Forms'
 class App extends Component {
 
 state= {
-  GroceryList: GroceryList,
+  GroceryData: GroceryData,
   groceryItem: "",
   groceryBrand: "",
   groceryUnits: "",
@@ -59,7 +59,7 @@ render() {
       groceryQuantity={this.groceryQuantity}
       />
 
-      <GroceryList groceries={this.state.production} id="groceryName" />
+      <GroceryList groceries={this.state.GroceryData} id="groceryName" />
 
       </div>
     </div>
