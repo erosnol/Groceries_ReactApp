@@ -1,11 +1,10 @@
-import GroceryItem from './GroceryItem'
+import GroceryItem from '../components/GroceryItem'
 
 const GroceryList = (props) => {
-  console.log(props.groceries);
   return (
     <div>
-    
-   {props.groceries.map((grocery, idx) => <GroceryItem product={grocery} key={idx} /> )}
+    <h1>Grocery List</h1>
+   {props.GroceryData.map((item, idx) => <GroceryItem GroceryData={item} key={idx} /> )}
     </div>
   );
 };

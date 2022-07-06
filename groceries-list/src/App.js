@@ -3,7 +3,7 @@ import GroceryData from './data/GroceryData'
 
 import { Component } from 'react'
 
-import GroceryList from './components/GroceryItem'
+import GroceryList from './components/GroceryList'
 import Form from './components/Forms'
 
 
@@ -15,6 +15,7 @@ state= {
   groceryBrand: "",
   groceryUnits: "",
   groceryQuantity: "",
+  isPurchased: false
 }
 
 
@@ -45,9 +46,10 @@ handleSubmit = (event) => {
 
 
 render() {
+  console.log(GroceryData);
   return(
     <div className="App">
-      <h1>Grocery List</h1>
+      <h1>Grocery</h1>
 
       <div className='container'>
       <Form 
@@ -59,7 +61,7 @@ render() {
       groceryQuantity={this.groceryQuantity}
       />
 
-      <GroceryList groceries={this.state.GroceryData} id="groceryName" />
+      <GroceryList GroceryData={this.state.GroceryData} id="groceryName" />
 
       </div>
     </div>
