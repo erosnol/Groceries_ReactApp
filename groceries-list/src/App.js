@@ -14,8 +14,7 @@ state= {
   groceryItem: "",
   groceryBrand: "",
   groceryUnits: "",
-  groceryQuantity: "",
-  isPurchased: false
+  groceryQuantity: ""
 }
 
 
@@ -26,24 +25,24 @@ handleChange = (event) =>{
 
 handleSubmit = (event) => {
   event.PreventDefault()
+
+
+  const newGrocery = {
+    item: this.state.groceryItem,
+    brand: this.state.groceryBrand,
+    units: this.state.groceryUnits,
+    quantity: this.state.groceryQuantity,
+    isPurchased: true
+  }
+  console.log(newGrocery);
+  this.setState({
+    GroceryData: [newGrocery, ...this.state.GroceryData],
+    grocercyItem: '',
+    groceryBrand: '',
+    groceryUnits: '',
+    groceryQuantity: ''
+  })
 }
-
-  // const newGrocery = {
-  //   item: this.state.groceryItem
-  //   brand: this.state.groceryBrand
-  //   units: this.state.groceryUnits
-  //   quantity: this.state.groceryQuantity
-  //   isPurchased: true
-  // }
-  // console.log(newGrocery);
-  // this.setState({
-  //   GroceryData: [newGrocery, ...this.state.GrocercyData],
-  //   grocercyItem: '',
-  //   groceryBrand: '',
-  //   groceryUnits: '',
-  //   groceryQuantity: ''
-  // })
-
 
 render() {
   console.log(GroceryData);
