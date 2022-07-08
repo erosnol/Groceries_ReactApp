@@ -1,20 +1,20 @@
 import './App.css';
-import { groceries } from './data/GroceryData'
+import  groceryData from './data/groceryData'
 
 import { Component } from 'react'
 
 import GroceryList from './components/GroceryList'
-import Form from './components/Forms'
+import Form from './components/Form'
 
 
 class App extends Component {
 
 state= {
-  groceries,
-  item: '',
-  brand: '',
-  units: '',
-  quantity: 0,
+  groceryData: groceryData,
+  groceryItem: "",
+  groceryBrand: "",
+  groceryUnits: "",
+  groceryQuantity: 0,
   isPurchased: false
 }
 
@@ -26,6 +26,7 @@ handleChange = (event) =>{
 
 handleSubmit = (event) => {
   event.PreventDefault()
+
   const newGrocery = {
     item: this.state.item,
     brand: this.state.brand,
@@ -36,7 +37,7 @@ handleSubmit = (event) => {
 
   // sets the new values in the state
   this.setState({
-    groceries: [newGrocery, ...this.state.groceries],
+    groceryData: [newGrocery, ...this.state.groceryData],
     item: '',
     brand: '',
     units: '',
@@ -46,21 +47,21 @@ handleSubmit = (event) => {
 }
 
 
-addToList = (item) => {
-  this.setState({
-    groceries: [item, ...this.state.groceries],
-  });
-};
+// addToList = (item) => {
+//   this.setState({
+//     groceries: [item, ...this.state.groceries],
+//   });
+// };
 
-removeItem = (product) => {
-  const items = this.state.groceries.filter(i => i.item !== product.item)
-  this.setState({items})
-}
+// removeItem = (product) => {
+//   const items = this.state.groceries.filter(i => i.item !== product.item)
+//   this.setState({items})
+// }
 
 
 
 render() {
-  
+  console.log(groceryData);
   return(
     <div className="App">
       <h1>Grocery</h1>
@@ -75,7 +76,7 @@ render() {
       groceryQuantity={this.groceryQuantity}
       />
 
-      <GroceryList groceries={this.state.groceries} addToList={this.addToList} id="groceryName" />
+      <GroceryList groceryData={this.state.groceryData} id="groceryName" />
 
       
     </div>

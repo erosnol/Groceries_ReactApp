@@ -1,5 +1,5 @@
-export const groceries = [
-  
+ const groceries = [
+
   {
     item: 'Pops Cereal',
     brand: 'Kellogs',
@@ -25,7 +25,8 @@ export const groceries = [
   },
 
 ];
-    
+
+export default groceries 
 
   
   
