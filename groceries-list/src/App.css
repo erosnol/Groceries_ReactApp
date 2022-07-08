@@ -1,38 +1,47 @@
+:root {
+  --dark-cerulean: #124e78;
+  --maastricht-blue: #0b132b;
+  --yankees-blue: #1C2541;
+  --sea-serpent: #5bc0be;
+  --aquamarine: #6fffe9;
+  --react: #00d8ff;
+}
+
 .App {
-  text-align: center;
+  background: var(--sea-serpent);
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App {
+  display: grid;
+  grid-template:
+    'Header Header Header'
+    'Input Input Input'
+    'List List List'
+    'footer footer footer'
+    ;
+
+
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-rows: 70px 50px auto 70px;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.Title {
+  grid-area: Header;
+  display: grid;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.form{
+  grid-area: Input;
+  display: flex;
+  justify-content: space-around;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.groceryList {
+  display: grid;
+  grid-area: List;
+  
 }

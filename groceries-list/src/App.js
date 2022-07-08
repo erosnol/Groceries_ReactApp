@@ -64,7 +64,8 @@ render() {
   console.log(groceryData);
   return(
     <div className="App">
-      <h1>Grocery</h1>
+
+      <h1 className='Title'>Grocery List </h1>
 
       
       <Form 
@@ -76,7 +77,7 @@ render() {
       groceryQuantity={this.groceryQuantity}
       />
 
-      <GroceryList groceryData={this.state.groceryData} id="groceryName" />
+      <GroceryList groceryData={this.state.groceryData} className="groceryList" />
 
       
     </div>
