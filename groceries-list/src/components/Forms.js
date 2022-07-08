@@ -4,7 +4,7 @@ const Form = (props) => {
         <label htmlFor="groceryItem">Item </label>
         <input
           type="text"
-          value={props.groceryItem}
+          value={props.item}
           onChange={props.handleChange}
           id="groceryItem"
         />
@@ -13,26 +13,37 @@ const Form = (props) => {
         <label htmlFor="groceryBrand">Brand </label>
         <input 
         type="text"
-        value={props.groceryBrand}
+        value={props.brand}
         onChange={props.handleChange}
         id='grocercyBrand'
         />
-
+        <br />
+        
         <label htmlFor="groceryUnits">Units </label>
         <input
-          type="number"
-          value={props.groceryUnits}
+          type="text"
+          value={props.units}
           onChange={props.handleChange}
           id="groceryUnits"
         />
+        <br />
 
         <label htmlFor="groceryQuantity">Quantity </label>
         <input
           type="number"
-          value={props.groceryQuantity}
+          value={props.quantity}
           onChange={props.handleChange}
           id="groceryQuantity"
         />
+        <br />
+
+        <label htmlFor="is-purchased">Purchased</label>
+        <input
+        type="checkbox"
+        value={props.isPurchased}
+        onChange={props.handleChange}
+        id="is-puchased"
+      />
 
 
         <input type="submit"  />

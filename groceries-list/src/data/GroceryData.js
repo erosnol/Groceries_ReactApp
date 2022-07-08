@@ -1,32 +1,9 @@
-const groceries = [
-  {
-    item: 'salads',
-    brand: 'GreatValue',
-    units: '',
-    quantity: 4,
-    isPurchased: false
-  },
-
-  {
-    item: 'Poptarts',
-    brand: 'GreatValue',
-    units: '2',
-    quantity: 2,
-    isPurchased: false
-  },
-
-  {
-    item: 'Organic Mangoes',
-    brand: 'Dole',
-    units: '',
-    quantity: 5,
-    isPurchased: false
-  },
-
+export const groceries = [
+  
   {
     item: 'Pops Cereal',
     brand: 'Kellogs',
-    units: '',
+    units: 'oz',
     quantity: 1,
     isPurchased: false
   },
@@ -34,7 +11,7 @@ const groceries = [
   {
     item: 'Brown Rice',
     brand: 'Tyson',
-    units: '',
+    units: 'lbs',
     quantity: 1,
     isPurchased: false
   },
@@ -42,14 +19,14 @@ const groceries = [
   {
     item: 'Water',
     brand: 'Smart Water',
-    units: '',
+    units: 'oz',
     quantity: 8,
     isPurchased: false
-  }
+  },
 
-]
+];
     
-  export default groceries;
+
   
   
   
