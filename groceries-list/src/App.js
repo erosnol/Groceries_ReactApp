@@ -21,7 +21,7 @@ state= {
 
 handleChange = (event) =>{
   
-  this.setState({ [event.target.id] : event.target.value} )
+  this.setState({ [event.target.id] : event.target.value })
 }
 
 handleSubmit = (event) => {
@@ -47,21 +47,20 @@ handleSubmit = (event) => {
 }
 
 
-// addToList = (item) => {
-//   this.setState({
-//     groceries: [item, ...this.state.groceries],
-//   });
-// };
+addToList = (item) => {
+  this.setState({
+    groceries: [item, ...this.state.groceries],
+  });
+};
 
-// removeItem = (product) => {
-//   const items = this.state.groceries.filter(i => i.item !== product.item)
-//   this.setState({items})
-// }
+removeItem = (product) => {
+  const items = this.state.groceries.filter(i => i.item !== product.item)
+  this.setState({items})
+}
 
 
 
 render() {
-  console.log(groceryData);
   return(
     <div className="App">
 
@@ -71,13 +70,14 @@ render() {
       <Form 
       handleSubmit={this.handleSubmit}
       handleChange={this.handleChange}
-      groceryItem={this.grocercyItem}
-      groceryBrand={this.groceryBrand}
-      groceryUnits={this.groceryUnits}
-      groceryQuantity={this.groceryQuantity}
+      groceryItem={this.state.grocercyItem}
+      groceryBrand={this.state.groceryBrand}
+      groceryUnits={this.state.groceryUnits}
+      groceryQuantity={this.state.groceryQuantity}
+      isPurchased={this.state.isPurchased}
       />
 
-      <GroceryList groceryData={this.state.groceryData} className="groceryList" />
+      <GroceryList groceryData={this.state.groceryData} addToList={this.addToList} className="groceryList" />
 
       
     </div>

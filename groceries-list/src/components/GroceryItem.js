@@ -1,11 +1,13 @@
 const GroceryItem = (props) => {
-    // const {item, brand, units, quantity} = props.groceryData
+    const {item, brand, units, quantity, isPurchased} = props.groceryData
       return(
-          <div>
-            <h1>Item: {props.groceryData.item}</h1>
-            <h2>Brand: {props.groceryData.brand}</h2>
-            <h2>Units: {props.groceryData.units}</h2>
-            <h2>Quantity: {props.groceryData.quantity}</h2>
+          <div onClick={() => props.addToCart(props.groceryData)}>
+            <h3 className="itemName">Item: {item}</h3>
+            <div className="details">
+            <p className="displaytext">Brand: {brand}</p>
+            <p className="displaytext">Units: {units}</p>
+            <p className="displaytext">Quantity: {quantity}</p>
+            </div>
             {/* <button onClick={ () => props.removeItem(props.product) }>Remove</button> */}
 
 
